@@ -1,44 +1,38 @@
-# ✅ TodoApi: Simple Todo List API with ASP.NET Core
+# ✅ Todo API – ASP.NET Core Web API
 
-**TodoApi** is a lightweight, RESTful API built using **ASP.NET Core** and **Entity Framework Core**, designed to perform basic CRUD operations on Todo items. This project demonstrates best practices in Web API development including DTO usage, clean architecture, and robust error handling.
-
----
-
-## 🚀 Features
-
-- 📄 **CRUD Operations**: Create, Read, Update, and Delete Todo items
-- 🔐 **DTO Usage**: Hide sensitive fields like `Secret` in API responses
-- 📦 **EF Core Integration**: Access and manipulate data using Entity Framework Core
-- 🌐 **RESTful API**: Follows clean and consistent REST conventions
-- 🔄 **Asynchronous Methods**: Uses async/await for scalable performance
-- 🧱 **Modular Structure**: Clear separation of concerns using Controllers, Models, and DTOs
+A simple Todo List REST API built using **ASP.NET Core Web API** and **Entity Framework Core**, with support for DTOs to hide sensitive fields.
 
 ---
 
-## 🛠️ Tech Stack
+## 📁 Project Overview
 
-| Layer       | Technology              |
-|-------------|--------------------------|
-| Backend     | ASP.NET Core Web API     |
-| ORM         | Entity Framework Core    |
-| Language    | C#                       |
-| IDE         | Visual Studio / VS Code  |
-| Format      | JSON (for data exchange) |
-| Target SDK  | .NET 6.0+ or later       |
+- **Framework:** ASP.NET Core Web API  
+- **Database:** Entity Framework Core with SQL provider  
+- **Features:**  
+  - CRUD operations  
+  - DTO to hide internal fields (`Secret`)  
+  - RESTful routing (`/api/TodoItems`)  
 
 ---
 
-## 📋 Prerequisites
+## 🚀 Getting Started
 
-- [.NET 6 SDK or higher](https://dotnet.microsoft.com/download)
-- Visual Studio 2022+ or VS Code
+### 🔧 Prerequisites
 
----
+- .NET 6 SDK or later
+- Visual Studio / VS Code
+- Postman or Swagger UI for testing
 
-## 🏗️ Installation & Running
-
-### 1. Clone the Repository
+### 🛠 Setup Steps
 
 ```bash
 git clone https://github.com/nisung-kerung/Todo-Web-Api
 cd Todo-Web-Api
+
+# Optional: If using EF Core migrations
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+# Run the app
+dotnet run
